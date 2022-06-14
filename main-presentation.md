@@ -3,8 +3,8 @@ marp: true
 ---
 <style>
     section {
-        background-color: #FFEFD5;
-        color: #E9967A;
+        background-color: #21618C;
+        color: #FFFFFF;
         font-family: Helvetica;
         font-size: 30px;
     }
@@ -12,7 +12,8 @@ marp: true
     h1 {
         font-weight: bold;
         font-size: 60px;
-        color: #CD5C5C;
+        color: #5DADE2;
+        text-align: center;
     }
     
     h2 {
@@ -50,15 +51,10 @@ marp: true
     }
 </style>
 
-# TEAM INNOVATION
-- Michelle Nazath
-- Stefan Axelson
-- Anthony Farina
-- Jonny Le
-- Ben Verley
-- Alex Barraza
+# 
+# The NEW Kingmakers
 
-![bg left fit](images/devops.png)
+![bg contain](images/DevOpsTeamPhoto3.png)
 
 ---
 # What is DevOps
