@@ -7,6 +7,7 @@ marp: true
         color: #FFFFFF;
         font-family: Helvetica;
         font-size: 30px;
+
     }
 
     h1 {
@@ -19,11 +20,30 @@ marp: true
     h2 {
         font-weight: bold;
         font-size: 40px;
-        color: #CD5C5C;
+        color: #AED6F1;
+    }
+    section.mjn{
+        background-color: #21618C;
+        color: #FFFFFF;
+        font-family: Helvetica;
+        font-size: 25px;
+    }
+
+    h1.mjn {
+        font-weight: bold;
+        font-size: 40px;
+        color: #5DADE2;
+        text-align: center;
+    }
+    
+    h2.mjn {
+        font-weight: bold;
+        font-size: 30px;
+        color: #AED6F1;
     }
 
     img {
-        background-color: #FFEFD5;
+        background-color: #21618C;
     }
     .columns-2 {
         display: grid;
@@ -49,6 +69,12 @@ marp: true
         grid-template-columns: repeat(5, minmax(0, 1fr));
         padding: 0 80px;
     }
+    .center {
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
 </style>
 
 # 
@@ -57,7 +83,7 @@ marp: true
 ![bg contain](images/DevOpsTeamPhoto3.png)
 
 ---
-# What is DevOps
+# WHAT IS DEVOPS?
 
 The DevOps team, aka the coders. We build the tools that the Digital Innovation team dreams up to make life easier, our work more reliable, our data more accurate.
 
@@ -79,7 +105,8 @@ The DevOps team, aka the coders. We build the tools that the Digital Innovation 
 ---
 
 # WORKFLOW
-```mermaid
+
+<div class = "mermaid">
 sequenceDiagram
     participant Business Requirements
     participant Request Log
@@ -93,9 +120,11 @@ sequenceDiagram
         Work Request-->>Work Request: Iterate
     end
     Work Request-->>Closeout: Documentation, Knowledge Transfer
-```
+</div>
+
 ---
-```mermaid
+
+<div class = "mermaid">
 graph LR
     A[eng1] --> |submit request| E(Request Log)
     B[eng2] --> |submit request| E(Request Log)
@@ -108,7 +137,8 @@ graph LR
     H --> I{fa:fa-folder Documentation}
     I --> J(fa:fa-light Knowledge Transfer)
     J --> K(fa:fa-flag Completed)
-```
+</div>
+
 ---
 [![](https://mermaid.ink/img/pako:eNqFksFOwzAMhl_FyoFT9wI5TALGAYEQWkFcegmN20WkcYkdJpj27qS0kwqdhE-W_Pv7f1k-qJosKq0Y3xOGGjfOtNF0VYBcvYniatebIHCV2AVkhm1WuogdBuGlbJgiC9xTuxy-UHw7KZbTa0-MlKbJWb_Var2eOWgo02vn5DfzgQTBYyNAzXmMBuoZBE0HQsAjI07cETJzGUznyTU8RkfRyRcWcMns2lBAWe_QJo_jtifqJ9C_sC1-ONzDBTz31uTkiwsONV9ZIm4FY14d5Rjs2PzdOd1Xw4bqNBzCiKOc_S7Q3qNtEZ6iCdxgrIIqVIexM87m5zgMwErJLp-vUjq3FptkvFSqCscsTT_Rb6wTiko3xjMWyiSh8jPUSktMeBJNDzapjt-b4N3J)](https://mermaid.live/edit#pako:eNqFksFOwzAMhl_FyoFT9wI5TALGAYEQWkFcegmN20WkcYkdJpj27qS0kwqdhE-W_Pv7f1k-qJosKq0Y3xOGGjfOtNF0VYBcvYniatebIHCV2AVkhm1WuogdBuGlbJgiC9xTuxy-UHw7KZbTa0-MlKbJWb_Var2eOWgo02vn5DfzgQTBYyNAzXmMBuoZBE0HQsAjI07cETJzGUznyTU8RkfRyRcWcMns2lBAWe_QJo_jtifqJ9C_sC1-ONzDBTz31uTkiwsONV9ZIm4FY14d5Rjs2PzdOd1Xw4bqNBzCiKOc_S7Q3qNtEZ6iCdxgrIIqVIexM87m5zgMwErJLp-vUjq3FptkvFSqCscsTT_Rb6wTiko3xjMWyiSh8jPUSktMeBJNDzapjt-b4N3J)
 
@@ -134,7 +164,7 @@ _class: lead
 <div class="columns-2-33">
 <div>
 
-# Fresh Start
+# FRESH START
 
 * What tools to use?
 * How about the workflow?
@@ -159,7 +189,7 @@ _class: lead
 _class: lead
 -->
 
-# Containers
+# CONTAINERS
 
 <div data-marpit-fragment class="columns-3">
 <div>
@@ -190,7 +220,7 @@ _class: lead
 _class: lead
 -->
 
-# Automate the Workflow
+# AUTOMATE THE WORKFLOW
 
 <div class="columns-5">
 <div>
@@ -229,7 +259,7 @@ _class: lead
 
 ---
 
-# Live Now
+# LIVE NOW
 
 <div class="columns-2">
 
@@ -282,30 +312,160 @@ _class: lead
 
 ---
 
-# When I started
-- Refresher on Python, learned FastAPI
-- Worked on Email API interactions
-- Consumption of Email API
+# PROJECT EXAMPLE | EMAIL API
 
-<!--- When I started the first project I was put on was working on the email API with Alex. I had to do a quick refresh of python, and learn about fast api, which is the restful api platform we were building our api with. I mostly worked on working out a few kinks, and how the api would be consumed. This led me into the second project I have worked on which was refactoring existing reporting scripts to consume the api --->
+<div class="center">
+
+![](images/emailapimermaid.svg)
+
+</div>
 
 ---
-# Email API
-- Git to kubernetes pipeline (high level)
+
+# EMAIL API | CREATE REPORT
+
+<div class="columns-2">
+<div>
+
+* Sends an HTML Tabular Report
+* Attachments allowed
+* Body/descriptions allowed
+* All attachments are saved in NocoDB
+
+</div>
+<div>
+
+![w:1200px](images/emailAPI.PNG)
+
+</div>
+
+---
+# EMAIL API | CREATE DATABASE (NocoDB)
+
+<div class="columns-2">
+<div>
+
+![w:1000](images/NocoDB.png)
+
+</div>
+<div>
+
+* Open Source
+* Converts a database to spreadsheets
+* Saves all attachments
+* Located by timestamp
+
+</div>
+
+---
+
+# EMAIL API | SYSLOG
+
+- Follow automated workflow
+    - Git to kubernetes pipeline (high level)
 - Logging and syslogging
-- screenshot of syslog server
+<!-- screenshot of syslog server-->
+
 ---
-# Refactor Project
-- Email API work led me to health script refactor project
+
+# REFACTOR PROJECT
+- Email API work led us to health script refactor project
 - More universal code base for health reports
 - Customer information pulled into single source instead of in each script
 
 <!--- The second project I have worked on so far is a refactorization project for the reporting scripts that exist accross most of our customers. All of these scripts had their own form of emailing and this is what the email api was set up for. Refactoring them to consume the email api led to an effort to make a more universal code base that all customers could pull from instead of a variety of highly custom scripts that all accomplish roughly the same task. This effort is still ongoing --->
+
 ---
 
-# Where it's all headed
+# WHERE WE ARE HEADED
 Refactored health scripts will
 - consume email api to have universal theme
 - exist in a repo that is pulled each time they run at customer sites
 - pull all customer info from external sources (Snow, NocoDB, ini)
 <!--- The end goal of these projects will tie together many efforts of the whole team. The reporting scripts code base will consume the email api, and be hosted on github where Jonny's deployment autmoation efforts with jenkins and kubernetes will allow for each customer to pull from the latest code base before running scripts ensuring they have the most up to date code. --->
+
+---
+
+# PRTG SENSOR CLEANUP
+ - 70,000 sensors
+- Automated the deletion of 10s of thousands of sensors to make the PRTG monitoring system more responsive
+ - Used the PRTG API to detect and delete only specific sensors in the network
+ <!-- First exposure to using an API and working with an enterprise network monitoring tool-->
+
+![bg right 90%](https://media.giphy.com/media/26gscNQHswYio5RBu/giphy.gif)
+
+---
+<!-- _class: mjn -->
+
+# TOOL SYNCHRONIZATION
+
+<div class="columns-2">
+<div>
+
+## MVP 
+- Automated sync script across PRTG > Meraki > SNOW that detects and corrects naming convention errors
+- Workflow
+    - Gathers information about a device from PRTG & Meraki 
+    - Validates ServiceNow records match customer environments
+</div>
+<div>
+
+## Rev 2 | Change Control
+ - Automate ticket creation before device names are changed
+ - Require Customer Approval
+ - Execute cross-environmental changes
+## Rev 3 | Generalization
+- Expand to other customers
+- Expand to other vendors
+</div>
+
+
+---
+
+<div class="mermaid">
+graph LR
+    A(PRTG) --> B(DEVICE API)
+    B --> C[(SNOW CMDB)]
+    C --> A
+</div>
+
+
+---
+
+# About Stefan
+- Joined Onboarding in 2020
+- Became Snow Admin after Lisa left in 2021
+- Moved to Dev Ops in 2022
+![bg left](https://tettra-production.s3.us-west-2.amazonaws.com/0d6efb4f154041e899af17bdcd19c1b5/fbe27c8f917e1ce2c683ef3af672007e/d822b155a4112474fdb7aea5ee22465e/568c2575f7d4e2dff2a65111f81dd26b/6mswpDtFW2sXZYvj0EMuuP0X6gy6mPc70skBJR6Z.PNG)
+
+---
+
+![bg right](https://www.forte-systems.com/wp-content/uploads/Banner1024x300-83.jpg)
+
+# Projects
+- Engineer "My Work Page" Redesign
+- Homepage Redesign
+- Change Overview Board
+- Customer Service Board
+- SLA Overhaul
+- Portal Overhaul
+
+---
+
+ABOUT ME NOTES
+
+<!---
+BEN
+# When I started
+- Refresher on Python, learned FastAPI
+- Worked on Email API interactions
+- Consumption of Email API
+
+ When I started the first project I was put on was working on the email API with Alex. I had to do a quick refresh of python, and learn about fast api, which is the restful api platform we were building our api with. I mostly worked on working out a few kinks, and how the api would be consumed. This led me into the second project I have worked on which was refactoring existing reporting scripts to consume the api --->
+
+ <!-- 
+ ANTHONY
+ # When I started / What I do
+ - I started at the beginning of February last year
+ - I specialize in automation
+ - I typically work with the PRTG, Meraki, and pysnow APIs to create scripts that will help customers or the team-->
