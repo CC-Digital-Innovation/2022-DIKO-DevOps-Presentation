@@ -7,20 +7,20 @@ marp: true
         color: #FFFFFF;
         font-family: Helvetica;
         font-size: 30px;
-
     }
-
     h1 {
         font-weight: bold;
         font-size: 60px;
         color: #5DADE2;
         text-align: center;
     }
-    
     h2 {
         font-weight: bold;
         font-size: 40px;
         color: #AED6F1;
+    }
+    a{
+        color: #82E0AA;
     }
     section.mjn{
         background-color: #21618C;
@@ -28,17 +28,16 @@ marp: true
         font-family: Helvetica;
         font-size: 25px;
     }
-
     h1.mjn {
         font-weight: bold;
-        font-size: 40px;
+        font-size: 35px;
         color: #5DADE2;
         text-align: center;
     }
     
     h2.mjn {
         font-weight: bold;
-        font-size: 30px;
+        font-size: 25px;
         color: #AED6F1;
     }
 
@@ -331,6 +330,7 @@ _class: lead
 * Attachments allowed
 * Body/descriptions allowed
 * All attachments are saved in NocoDB
+* All events are logged in a syslog
 
 </div>
 <div>
@@ -361,17 +361,23 @@ _class: lead
 
 # EMAIL API | SYSLOG
 
-- Follow automated workflow
-    - Git to kubernetes pipeline (high level)
-- Logging and syslogging
-<!-- screenshot of syslog server-->
+- Leverages loguru for local logging and sysloging
+- Various options for logging
+    - console
+    - file
+    - syslog
+
+![w:500](images/syslogemailapi.png)
+
+<!-- Follows the automated workflow, Git to kubernetes pipeline (high level)screenshot of syslog server-->
 
 ---
 
-# REFACTOR PROJECT
+# REFACTOR HEALTH SCRIPT PROJECT
 - Email API work led us to health script refactor project
 - More universal code base for health reports
-- Customer information pulled into single source instead of in each script
+- Eliminated the depenecy of hard coded Customer information in individual scripts 
+    - Created NocoDB for configuration setting
 
 <!--- The second project I have worked on so far is a refactorization project for the reporting scripts that exist accross most of our customers. All of these scripts had their own form of emailing and this is what the email api was set up for. Refactoring them to consume the email api led to an effort to make a more universal code base that all customers could pull from instead of a variety of highly custom scripts that all accomplish roughly the same task. This effort is still ongoing --->
 
@@ -385,24 +391,31 @@ Refactored health scripts will
 <!--- The end goal of these projects will tie together many efforts of the whole team. The reporting scripts code base will consume the email api, and be hosted on github where Jonny's deployment autmoation efforts with jenkins and kubernetes will allow for each customer to pull from the latest code base before running scripts ensuring they have the most up to date code. --->
 
 ---
+<!-- _class: mjn -->
 
-# PRTG SENSOR CLEANUP
- - 70,000 sensors
-- Automated the deletion of 10s of thousands of sensors to make the PRTG monitoring system more responsive
- - Used the PRTG API to detect and delete only specific sensors in the network
- <!-- First exposure to using an API and working with an enterprise network monitoring tool-->
+## TOOL SYNCHRONIZATION
 
-![bg right 90%](https://media.giphy.com/media/26gscNQHswYio5RBu/giphy.gif)
+### WHY
+* D42 does not allow ServiceNow to add more than one device at this time
+
+### MVP FEATURES
+* Created an API to pull all data from D42 to a csv
+* Map data in csv to ServiceNow to populate CMDB instantly
+
+### REV 2
+* Improve internal workflow on Device42
+
+![bg left:30%](https://media.giphy.com/media/eJFnnIa1UZEirYB7TU/giphy.gif)
 
 ---
 <!-- _class: mjn -->
 
-# TOOL SYNCHRONIZATION
+## TOOL SYNCHRONIZATION
 
 <div class="columns-2">
 <div>
 
-## MVP 
+### MVP 
 - Automated sync script across PRTG > Meraki > SNOW that detects and corrects naming convention errors
 - Workflow
     - Gathers information about a device from PRTG & Meraki 
@@ -410,45 +423,51 @@ Refactored health scripts will
 </div>
 <div>
 
-## Rev 2 | Change Control
+### Rev 2 | Change Control
  - Automate ticket creation before device names are changed
  - Require Customer Approval
  - Execute cross-environmental changes
-## Rev 3 | Generalization
+### Rev 3 | Generalization
 - Expand to other customers
 - Expand to other vendors
 </div>
 
-
 ---
 
-<div class="mermaid">
-graph LR
-    A(PRTG) --> B(DEVICE API)
-    B --> C[(SNOW CMDB)]
-    C --> A
-</div>
+# PRTG SENSOR CLEANUP
+- 70,000 sensors
+- Automated the deletion of 10s of thousands of sensors to make the PRTG monitoring system more responsive
+- Used the PRTG API to detect and delete only specific sensors in the network
 
+ <!-- First exposure to using an API and working with an enterprise network monitoring tool-->
 
----
+![bg right 90%](https://media.giphy.com/media/26gscNQHswYio5RBu/giphy.gif)
 
-# About Stefan
-- Joined Onboarding in 2020
-- Became Snow Admin after Lisa left in 2021
-- Moved to Dev Ops in 2022
-![bg left](https://tettra-production.s3.us-west-2.amazonaws.com/0d6efb4f154041e899af17bdcd19c1b5/fbe27c8f917e1ce2c683ef3af672007e/d822b155a4112474fdb7aea5ee22465e/568c2575f7d4e2dff2a65111f81dd26b/6mswpDtFW2sXZYvj0EMuuP0X6gy6mPc70skBJR6Z.PNG)
 
 ---
 
 ![bg right](https://www.forte-systems.com/wp-content/uploads/Banner1024x300-83.jpg)
 
-# Projects
+# SNOW PROJECTS
 - Engineer "My Work Page" Redesign
 - Homepage Redesign
 - Change Overview Board
 - Customer Service Board
 - SLA Overhaul
 - Portal Overhaul
+
+---
+
+SNOW CONTINUED - pending photos from stefan
+
+---
+
+SNOW CONTINUED - pending photos from stefan
+
+---
+
+# THE END
+
 
 ---
 
@@ -469,3 +488,10 @@ BEN
  - I started at the beginning of February last year
  - I specialize in automation
  - I typically work with the PRTG, Meraki, and pysnow APIs to create scripts that will help customers or the team-->
+
+
+ <!--
+ STEFAN
+ - Joined Onboarding in 2020
+- Became Snow Admin after Lisa left in 2021
+- Moved to Dev Ops in 2022-->
