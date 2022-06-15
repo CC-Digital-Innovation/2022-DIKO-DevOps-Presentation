@@ -359,7 +359,9 @@ _class: lead
 
 ---
 
-# EMAIL API | SYSLOG
+<!-- _class: mjn -->
+
+## EMAIL API | SYSLOG
 
 - Leverages loguru for local logging and sysloging
 - Various options for logging
@@ -367,7 +369,8 @@ _class: lead
     - file
     - syslog
 
-![w:500](images/syslogemailapi.png)
+![bg vertical right:50% 100%](images/syslogemailapi.png)
+![bg 100%](images/syslogfile.png)
 
 <!-- Follows the automated workflow, Git to kubernetes pipeline (high level)screenshot of syslog server-->
 
