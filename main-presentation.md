@@ -40,7 +40,24 @@ marp: true
         font-size: 25px;
         color: #AED6F1;
     }
-
+    section.table {
+        background-color: white;
+        color: #5DADE2;
+        font-family: Helvetica;
+        font-size: 25px;
+    }
+    h1.table {
+        font-weight: bold;
+        font-size: 35px;
+        color: #21618C;
+        text-align: center;
+    }
+    
+    h2.table {
+        font-weight: bold;
+        font-size: 25px;
+        color: #21618C;
+    }
     img {
         background-color: #21618C;
     }
@@ -310,8 +327,38 @@ _class: lead
 -->
 
 ---
+<!-- _class: table-->
+# PROJECT LIST ACTIVE | COMPLETED | BACKLOG
 
-# PROJECT EXAMPLE | EMAIL API
+| Active | Completed | Backlog | 
+| :----------- | :----------- | :----------- |
+| Email API | Power Check | |
+| Refactoring of Health Scripts | SNOW to PRTG Deployment Automation| | |
+| Device42 to SNOW CMDB Automation & Validation | | |
+| PRTG Sensor Cleanup | | | 
+| SNOW>Meraki>PRTG Validation| | | 
+| SNOW Enduser Improvements | | |
+| N.E.W.T.O.N. | | | 
+
+
+---
+
+# EMAIL API
+
+## Problem Statement
+As part of our services we provide daily reports via email with the current status of all devices we manage. This provides huge value to the customer in that is gives them a summary of the environments health each morning they can review quickly without having to login and check each system manually or sort through individual emails from each device. However maintaining this has been complex, there had to be a better way. Issues with the original deployment were:
+- Inconsistency of format, structure and deployment of all email updates
+- Dependent on the customer to run said email report
+- In ability to manage updates to script across all customers at once
+
+---
+
+# DEVELOPERS WORKFLOW
+
+
+
+
+---
 
 <div class="center">
 
