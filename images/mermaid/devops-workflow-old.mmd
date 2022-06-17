@@ -1,0 +1,17 @@
+sequenceDiagram
+    actor Developer
+    Developer->>GitHub: git push
+
+    participant S as Laptop/Server
+    activate S
+    alt 
+        S->>GitHub: git clone
+        GitHub-->>S: 
+    else
+        Developer ->>S: copy + paste / FTP
+    end
+    S->>S: configure
+    Note right of S: Includes credentials and other<br/> secrets in plain text file
+    S->>S: launch program
+    Note right of S: terminal for one time or<br/> cronjob/Windows scheduler
+    deactivate S
