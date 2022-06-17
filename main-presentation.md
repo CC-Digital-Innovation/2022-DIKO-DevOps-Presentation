@@ -241,8 +241,6 @@ _class: lead
 <div class="columns-5">
 <div>
 
-![w:100px](images/stick.png)
-
 </div>
 <div>
 

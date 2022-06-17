@@ -1,0 +1,10 @@
+sequenceDiagram
+    actor Developer
+    Developer->>+GitHub: git push
+    GitHub->>+Jenkins: Webhook
+    Jenkins->>GitLab: Build image
+    Jenkins->>-Kubernetes: Update
+    activate Kubernetes
+    Kubernetes->>GitLab: Get image
+    GitLab-->>Kubernetes: 
+    deactivate Kubernetes
