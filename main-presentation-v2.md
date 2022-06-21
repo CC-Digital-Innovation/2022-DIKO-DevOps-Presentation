@@ -120,9 +120,11 @@ The DevOps team, aka the coders. We build the tools that the Digital Innovation 
 
 ---
 
-# WORKFLOW
+# REQUEST LOG WORKFLOW
 
 [![](https://mermaid.ink/img/pako:eNqV0slqwzAQBuBXGXRKIHkBHwptnD2lEAd6sHtQrbEtqsXV0hDsvHsVW4WSW3QaNN8_SEgdKTVDkpDa0LaBw7FQENZzfsKyeWvtB8znT9Bb_ym5A4PfHq3rYTk5jiUcdD0dMy95drGPRRZ5lr4-EkjzjAp8JLEc6Ko74g_HM0RwHZurobnuKppUdG5brhQaeNfm6w6uB7iJsBbUWrQwzoxkcyM9d2iow379bxO2MVdpwcL8VJdeonLUca1iejvA3WSEgteNg73SZ4GsRjgZqmyFJt5pN-B9xJWgNSy0bAU6ZFMyIxKNpJyFV-1ugYK4BiUWJAklw4p64QpSqGugvmXhuEvGnTYkTBMWZ4R6p7OLKknijMc_lHIaPomM6voLJ_661w)](https://mermaid.live/edit#pako:eNqV0slqwzAQBuBXGXRKIHkBHwptnD2lEAd6sHtQrbEtqsXV0hDsvHsVW4WSW3QaNN8_SEgdKTVDkpDa0LaBw7FQENZzfsKyeWvtB8znT9Bb_ym5A4PfHq3rYTk5jiUcdD0dMy95drGPRRZ5lr4-EkjzjAp8JLEc6Ko74g_HM0RwHZurobnuKppUdG5brhQaeNfm6w6uB7iJsBbUWrQwzoxkcyM9d2iow379bxO2MVdpwcL8VJdeonLUca1iejvA3WSEgteNg73SZ4GsRjgZqmyFJt5pN-B9xJWgNSy0bAU6ZFMyIxKNpJyFV-1ugYK4BiUWJAklw4p64QpSqGugvmXhuEvGnTYkTBMWZ4R6p7OLKknijMc_lHIaPomM6voLJ_661w)
+
+## I LOVE MERMAID
 
 <!--
 graph LR
@@ -172,21 +174,12 @@ graph LR
 
 ---
 
-# COMPLETED | ACTIVE | BACKLOG
-
-![](images/completed.png)
-![](images/active.png)
-
----
-
 # LEGACY DEVOPS WORKFLOW
 
-<div class="center">
 
-![bg right:50% 118%](images/old-workflow.svg)
+![bg left:58% 80%](images/old-workflow.svg)
 
-</div>
-
+<!-- Anthony -->
 
 ---
 
@@ -406,6 +399,14 @@ Deployment of PRTG for each customer was very manual and comprehensive process t
 # 3. PRODUCTION TO SCALE 
 ## Kubernetes
 - ADD MORE
+
+---
+
+# COMPLETED | ACTIVE | BACKLOG
+
+![](images/completed.png)
+![](images/active.png)
+
 
 ---
 
