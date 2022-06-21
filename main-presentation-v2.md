@@ -122,41 +122,22 @@ The DevOps team, aka the coders. We build the tools that the Digital Innovation 
 
 # WORKFLOW
 
-<div class = "mermaid">
-sequenceDiagram
-    participant Business Requirements
-    participant Request Log
-    participant Work Request
-    participant Closeout
-    Business Requirements-->>Request Log: Submit Request
-    Note left of Business Requirements: ops team to submit request 
-    Request Log-->>Work Request: Prioritze, Assign, Schedule
-    loop 
-        Request Log-->>Work Request: Review & Update Request Log
-        Work Request-->>Work Request: Iterate
-    end
-    Work Request-->>Closeout: Documentation, Knowledge Transfer
-</div>
+[![](https://mermaid.ink/img/pako:eNqV0slqwzAQBuBXGXRKIHkBHwptnD2lEAd6sHtQrbEtqsXV0hDsvHsVW4WSW3QaNN8_SEgdKTVDkpDa0LaBw7FQENZzfsKyeWvtB8znT9Bb_ym5A4PfHq3rYTk5jiUcdD0dMy95drGPRRZ5lr4-EkjzjAp8JLEc6Ko74g_HM0RwHZurobnuKppUdG5brhQaeNfm6w6uB7iJsBbUWrQwzoxkcyM9d2iow379bxO2MVdpwcL8VJdeonLUca1iejvA3WSEgteNg73SZ4GsRjgZqmyFJt5pN-B9xJWgNSy0bAU6ZFMyIxKNpJyFV-1ugYK4BiUWJAklw4p64QpSqGugvmXhuEvGnTYkTBMWZ4R6p7OLKknijMc_lHIaPomM6voLJ_661w)](https://mermaid.live/edit#pako:eNqV0slqwzAQBuBXGXRKIHkBHwptnD2lEAd6sHtQrbEtqsXV0hDsvHsVW4WSW3QaNN8_SEgdKTVDkpDa0LaBw7FQENZzfsKyeWvtB8znT9Bb_ym5A4PfHq3rYTk5jiUcdD0dMy95drGPRRZ5lr4-EkjzjAp8JLEc6Ko74g_HM0RwHZurobnuKppUdG5brhQaeNfm6w6uB7iJsBbUWrQwzoxkcyM9d2iow379bxO2MVdpwcL8VJdeonLUca1iejvA3WSEgteNg73SZ4GsRjgZqmyFJt5pN-B9xJWgNSy0bAU6ZFMyIxKNpJyFV-1ugYK4BiUWJAklw4p64QpSqGugvmXhuEvGnTYkTBMWZ4R6p7OLKknijMc_lHIaPomM6voLJ_661w)
 
----
-
-<div class = "mermaid">
+<!--
 graph LR
-    A[eng1] --> |submit request| E(Request Log)
-    B[eng2] --> |submit request| E(Request Log)
-    C[eng3] --> |submit request| E(Request Log)
-    D[eng4] --> |submit request| E(Request Log)
-    E --> F{Review Request}
-    F --> G{fa:fa-spinner Work Request}
-    G --> H{fa:fa-glasses Review}
-    H -->|iterate|G
-    H --> I{fa:fa-folder Documentation}
-    I --> J(fa:fa-light Knowledge Transfer)
-    J --> K(fa:fa-flag Completed)
-</div>
-
----
-[![](https://mermaid.ink/img/pako:eNqFksFOwzAMhl_FyoFT9wI5TALGAYEQWkFcegmN20WkcYkdJpj27qS0kwqdhE-W_Pv7f1k-qJosKq0Y3xOGGjfOtNF0VYBcvYniatebIHCV2AVkhm1WuogdBuGlbJgiC9xTuxy-UHw7KZbTa0-MlKbJWb_Var2eOWgo02vn5DfzgQTBYyNAzXmMBuoZBE0HQsAjI07cETJzGUznyTU8RkfRyRcWcMns2lBAWe_QJo_jtifqJ9C_sC1-ONzDBTz31uTkiwsONV9ZIm4FY14d5Rjs2PzdOd1Xw4bqNBzCiKOc_S7Q3qNtEZ6iCdxgrIIqVIexM87m5zgMwErJLp-vUjq3FptkvFSqCscsTT_Rb6wTiko3xjMWyiSh8jPUSktMeBJNDzapjt-b4N3J)](https://mermaid.live/edit#pako:eNqFksFOwzAMhl_FyoFT9wI5TALGAYEQWkFcegmN20WkcYkdJpj27qS0kwqdhE-W_Pv7f1k-qJosKq0Y3xOGGjfOtNF0VYBcvYniatebIHCV2AVkhm1WuogdBuGlbJgiC9xTuxy-UHw7KZbTa0-MlKbJWb_Var2eOWgo02vn5DfzgQTBYyNAzXmMBuoZBE0HQsAjI07cETJzGUznyTU8RkfRyRcWcMns2lBAWe_QJo_jtifqJ9C_sC1-ONzDBTz31uTkiwsONV9ZIm4FY14d5Rjs2PzdOd1Xw4bqNBzCiKOc_S7Q3qNtEZ6iCdxgrIIqVIexM87m5zgMwErJLp-vUjq3FptkvFSqCscsTT_Rb6wTiko3xjMWyiSh8jPUSktMeBJNDzapjt-b4N3J)
+    A[eng1] -> |submit request| E(Request Log)
+    B[eng2] -> |submit request| E(Request Log)
+    C[eng3] -> |submit request| E(Request Log)
+    D[eng4] -> |submit request| E(Request Log)
+    E -> F{Review Request}
+    F -> G{fa:fa-spinner Work Request}
+    G -> H{fa:fa-glasses Review}
+    H ->|iterate|G
+    H -> I{fa:fa-folder Documentation}
+    I -> J(fa:fa-light Knowledge Transfer)
+    J -> K(fa:fa-flag Completed)
+-->
 
 ---
 # WE ARE NOT MIND READERS
@@ -195,6 +176,17 @@ graph LR
 
 ![](images/completed.png)
 ![](images/active.png)
+
+---
+
+# LEGACY DEVOPS WORKFLOW
+
+<div class="center">
+
+![bg right:50% 118%](images/old-workflow.svg)
+
+</div>
+
 
 ---
 
@@ -261,7 +253,7 @@ _class: lead
 _class: lead
 -->
 
-# AUTOMATE THE WORKFLOW
+# NEW AUTOMATED THE WORKFLOW
 
 <div class="columns-5">
 <div>
@@ -355,7 +347,7 @@ _class: lead
 
 ## TOOL SYNCHRONIZATION
 
-### WHY
+### GOAL
 * ServiceNow to become the single source of truth 
 
 ### PROJECTS AROUND THIS WHY
@@ -374,6 +366,14 @@ _class: lead
 
 </div>
 
+<!-- graph LR
+    A(Device42) -.-> C
+    G(PRTG)-.-> C
+    B(OEM API) -.-> C((SERVICENOW))
+    C -.-> D(Automated PRTG Deployment)
+    C -.-> E(Warranty Status Dashboards)
+    C -.-> F(Customer Reporting)-->
+
 ---
 
 # DEVELOPERS WORKFLOW 
@@ -384,7 +384,9 @@ Deployment of PRTG for each customer was very manual and comprehensive process t
 ---
 
 # 1. SOLVE PROBLEM LOCALLY
-
+- Break the issue into bite size chunks to work on
+- Develop Solution
+- TEAM ADD MORE
 
 
 ---
@@ -397,15 +399,18 @@ Deployment of PRTG for each customer was very manual and comprehensive process t
 - No Constants
 ## BUILD PROCESS
 - Containerize 
+- ADD MORE
 
 ---
 
 # 3. PRODUCTION TO SCALE 
 ## Kubernetes
+- ADD MORE
 
 ---
 
-# THE END
+![bg fit](https://media.giphy.com/media/hcDxFkTJdx2W4/giphy.gif)
 
 
----
+<!-- engage us we are all just waiting to help you more! -->
+
