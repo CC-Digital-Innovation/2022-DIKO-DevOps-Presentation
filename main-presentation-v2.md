@@ -94,12 +94,18 @@ marp: true
 </style>
 
 # 
-# The NEW Kids on the Block
+# The NEW Kingmakers
 
 ![bg contain](images/DevOpsTeamPhoto3.png)
 
 ---
-# WHAT IS DEVOPS?
+# HOW DEVELOPERS CONQUERED THE WORLD
+_"Developers are the most important, most-valuable cinstituency in business today., regardless of industry. Technologist newly empowered with tools, hyperconnectedvia specialized collaboration and communication networks, and increasegly aware of their own value are no longer content to be mere stage players. They're taking an active hand at direction. That gene is out of the bottle, and will not be returned to it."_ - Stephen O'Grady, The New Kingmakers
+
+* **DISCLAIMER**  _"However, developers can only represent a competitive edge for a business if they are willing to work with that business"_
+
+---
+# WHAT IS DEVOPS WITHIN XS?
 
 The DevOps team, aka the coders. We build the tools that the Digital Innovation team dreams up to make life easier, our work more elegant,reliable, our data more accurate.
 
@@ -369,14 +375,13 @@ _class: lead
 
 ---
 
-# DEVELOPERS WORKFLOW 
-## SNOW TO PRTG DEPLOYMENT
-### PROBLEM STATMENT
+# SNOW TO PRTG DEPLOYMENT
+## PROBLEM STATMENT
 Deployment of PRTG for each customer was very manual and comprehensive process that is completely seperated from SNOW CMDB creation. So we were constantly running into the issue of SNOW and PRTG not matching.
 
 ---
-
-# 1. SOLVE PROBLEM LOCALLY
+# DEVELOPERS WORKFLOW 
+## 1. SOLVE PROBLEM LOCALLY
 - Break the issue into bite size chunks to work on
 - Develop Solution
 - TEAM ADD MORE
@@ -384,7 +389,7 @@ Deployment of PRTG for each customer was very manual and comprehensive process t
 
 ---
 
-# 2. MOVE TO PRODUCTION
+## 2. MOVE TO PRODUCTION
 
 ## HARDEN APPLICATION
 - Move Credentials to Vault
@@ -396,7 +401,7 @@ Deployment of PRTG for each customer was very manual and comprehensive process t
 
 ---
 
-# 3. PRODUCTION TO SCALE 
+## 3. PRODUCTION TO SCALE 
 ## Kubernetes
 - ADD MORE
 
