@@ -198,9 +198,6 @@ graph LR
 
 ---
 
-
----
-
 <!--
 _class: lead
 -->
@@ -354,7 +351,6 @@ _class: lead
 
 ---
 
----
 <!-- _class: mjn -->
 
 ## TOOL SYNCHRONIZATION
@@ -363,14 +359,20 @@ _class: lead
 * ServiceNow to become the single source of truth 
 
 ### PROJECTS AROUND THIS WHY
-* 
-* Map Device 42 to SNOW CMDB automatically 
-* Automated sync script across PRTG > Meraki > SNOW that detects and corrects naming convention errors
+1. Automated ServiceNow to PRTG Deployment
+2. Map Device 42 to SNOW CMDB automatically 
+3. Automated sync script across PRTG > Meraki > SNOW that detects and corrects naming convention errors
 
-### REV 2
-* Improve internal workflow on Device42
+![bg left:40%](https://media.giphy.com/media/eJFnnIa1UZEirYB7TU/giphy.gif)
 
-![bg left:30%](https://media.giphy.com/media/eJFnnIa1UZEirYB7TU/giphy.gif)
+---
+# SERVICENOW SINGLE SOURCE OF TRUTH
+
+<div class="center">
+
+[![](https://mermaid.ink/img/pako:eNpV0MFqwzAMBuBXMTo50O4wdsphkCVeKWxrScZ68UWL1SaQ2MGWB6H03eeSFVadzO8PIekMrTMEOZw8Tp14q7UVqQpZ0U_f0tNjJtYP62dRLvlG7uvPTfY_epE79S6K_fYmpWxU_bUt1cfukGULKpe_ShaR3YhMRlwbiYqmwc0jWb6HSh7Qe7Q8i4aRYxAVhu7boTfhXr7KMobUk7yoaXKee3vKYAUpGLE3abPz1WvgjkbSkKenoSPGgTVoe0k0TiZNpEzPzkN-xCHQCjAN2sy2hZx9pBuqekyHGv_U5ReJU2Ag)](https://mermaid.live/edit#pako:eNpV0MFqwzAMBuBXMTo50O4wdsphkCVeKWxrScZ68UWL1SaQ2MGWB6H03eeSFVadzO8PIekMrTMEOZw8Tp14q7UVqQpZ0U_f0tNjJtYP62dRLvlG7uvPTfY_epE79S6K_fYmpWxU_bUt1cfukGULKpe_ShaR3YhMRlwbiYqmwc0jWb6HSh7Qe7Q8i4aRYxAVhu7boTfhXr7KMobUk7yoaXKee3vKYAUpGLE3abPz1WvgjkbSkKenoSPGgTVoe0k0TiZNpEzPzkN-xCHQCjAN2sy2hZx9pBuqekyHGv_U5ReJU2Ag)
+
+</div>
 
 ---
 
@@ -381,65 +383,25 @@ Deployment of PRTG for each customer was very manual and comprehensive process t
 
 ---
 
+# 1. SOLVE PROBLEM LOCALLY
 
 
 
 ---
-<!-- _class: mjn -->
 
-## TOOL SYNCHRONIZATION
+# 2. MOVE TO PRODUCTION
 
-<div class="columns-2">
-<div>
-
-### MVP 
-- Automated sync script across PRTG > Meraki > SNOW that detects and corrects naming convention errors
-- Workflow
-    - Gathers information about a device from PRTG & Meraki 
-    - Validates ServiceNow records match customer environments
-</div>
-<div>
-
-### Rev 2 | Change Control
- - Automate ticket creation before device names are changed
- - Require Customer Approval
- - Execute cross-environmental changes
-### Rev 3 | Generalization
-- Expand to other customers
-- Expand to other vendors
-</div>
+## HARDEN APPLICATION
+- Move Credentials to Vault
+- No plain text keys or secrets
+- No Constants
+## BUILD PROCESS
+- Containerize 
 
 ---
 
-# PRTG SENSOR CLEANUP
-- 70,000 sensors
-- Automated the deletion of 10s of thousands of sensors to make the PRTG monitoring system more responsive
-- Used the PRTG API to detect and delete only specific sensors in the network
-
- <!-- First exposure to using an API and working with an enterprise network monitoring tool-->
-
-![bg right 90%](https://media.giphy.com/media/26gscNQHswYio5RBu/giphy.gif)
-
-
----
-
-![bg right](https://www.forte-systems.com/wp-content/uploads/Banner1024x300-83.jpg)
-
-# SNOW PROJECTS
-- Engineer "My Work Page" Redesign
-- Homepage Redesign
-- Change Overview Board
-- Customer Service Board
-- SLA Overhaul
-- Portal Overhaul
-
----
-
-SNOW CONTINUED - pending photos from stefan
-
----
-
-SNOW CONTINUED - pending photos from stefan
+# 3. PRODUCTION TO SCALE 
+## Kubernetes
 
 ---
 
@@ -447,28 +409,3 @@ SNOW CONTINUED - pending photos from stefan
 
 
 ---
-
-ABOUT ME NOTES
-
-<!---
-BEN
-# When I started
-- Refresher on Python, learned FastAPI
-- Worked on Email API interactions
-- Consumption of Email API
-
- When I started the first project I was put on was working on the email API with Alex. I had to do a quick refresh of python, and learn about fast api, which is the restful api platform we were building our api with. I mostly worked on working out a few kinks, and how the api would be consumed. This led me into the second project I have worked on which was refactoring existing reporting scripts to consume the api --->
-
- <!-- 
- ANTHONY
- # When I started / What I do
- - I started at the beginning of February last year
- - I specialize in automation
- - I typically work with the PRTG, Meraki, and pysnow APIs to create scripts that will help customers or the team-->
-
-
- <!--
- STEFAN
- - Joined Onboarding in 2020
-- Became Snow Admin after Lisa left in 2021
-- Moved to Dev Ops in 2022-->
