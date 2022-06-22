@@ -73,6 +73,12 @@ marp: true
 
     .columns-3 {
         display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 35px;
+    }
+
+    .columns-3-custom {
+        display: grid;
         grid-template-columns: 1fr 0.5fr 1.5fr
     }
 
@@ -80,11 +86,11 @@ marp: true
         padding: 70px 0;
     }
 
-    .columns-5 {
+    .columns-6 {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        padding: 0 80px;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
     }
+
     .center {
         display: block;
         margin: 0;
@@ -183,7 +189,7 @@ graph LR
 # LEGACY DEVOPS WORKFLOW
 
 
-![bg left:58% 80%](images/old-workflow.svg)
+![bg left:58% 100%](images/old-workflow.svg)
 
 <!-- Anthony -->
 
@@ -221,123 +227,44 @@ _class: lead
 _class: lead
 -->
 
-# CONTAINERS
+# NEW AUTOMATED WORKFLOW
 
-<div data-marpit-fragment class="columns-3">
+<div class="columns-6">
 <div>
 
-![w:300px v-center](images/docker-logo.png)
+</div>
+<div class="center">
+
+![w:100px](images/github.png)
 
 </div>
-<div data-marpit-fragment>
+<div style="padding-left: 35px;">
 
-![w:150px v-center](images/right-arrow.png)
-
-</div>
-<div data-marpit-fragment>
-
-![w:490px v-center](images/k8s-logo.png)
+![w:85px](images/jenkins.png)
 
 </div>
-</div>
+<div style="padding-left: 10px;">
 
-<!--
-- what are containers: illustrate with Moby
-- more tools = more complexity, right?
--->
-
----
-
-<!--
-_class: lead
--->
-
-# NEW AUTOMATED THE WORKFLOW
-
-<div class="columns-5">
-<div>
+![w:110px](images/gitlab.png)
 
 </div>
 <div>
 
-![w:150px](images/github.png)
+![w:110px](images/k8s-logo.png)
 
 </div>
-<div>
+<div style="padding-left: 15px;">
 
-![w:100px](images/jenkins.png)
-
-</div>
-<div>
-
-![w:150px](images/gitlab.png)
-
-</div>
-<div>
-
-![w:150px](images/k8s-logo.png)
+![w:60px](images/vault.png)
 
 </div>
 </div>
 
-![w:1070px](images/devops-workflow-1.svg)
+![w:1090px](images/devops-workflow-1.svg)
 
 <!--
 - manually, the process is like...
 - emphasize single line from dev pov
--->
-
----
-
-# LIVE NOW
-
-<div class="columns-2">
-
-<div class="columns-2">
-<div>
-
-![w:200px](images/vault.png)
-![w:300px](images/fastapi.png)
-
-
-</div>
-<div>
-
-![w:240px](images/jenkins.png)
-![w:280px](images/gitlab.png)
-
-
-</div>
-</div>
-
-<div>
-
-#### **Docker**
-
-- PRTG Test Drive
-
-#### **Kubernetes**
-
-<div class="columns-2">
-<div>
-
-- Vault
-- Jenkins
-- Gitlab
-
-</div>
-<div>
-
-- SNOW to PRTG Automation
-- Email API
-
-</div>
-</div>
-</div>
-</div>
-
-<!--
-- self-deployed apps
 -->
 
 ---
@@ -383,27 +310,108 @@ Deployment of PRTG for each customer was very manual and comprehensive process t
 # DEVELOPERS WORKFLOW 
 ## 1. SOLVE PROBLEM LOCALLY
 - Break the issue into bite size chunks to work on
-- Develop Solution
-- TEAM ADD MORE
-
+- Develop solution
+- Test and re-test
+- Version control the code
 
 ---
 
 ## 2. MOVE TO PRODUCTION
 
+<div class="columns-2">
+<div>
+
 ## HARDEN APPLICATION
-- Move Credentials to Vault
-- No plain text keys or secrets
-- No Constants
+- Create global configurations
+- Encrypt PRTG and SNOW credentials
+- Create container configuration
+
 ## BUILD PROCESS
-- Containerize 
-- ADD MORE
+- Build container image
+- Push to container registry
+- Deploy to Docker Server
+
+</div>
+<div class="center">
+
+![w:300px](images/docker-logo.png)
+
+![w:600px](images/portainer.png)
+
+</div>
+</div>
+
+---
+
+# CONTAINERS
+
+<div data-marpit-fragment class="columns-3-custom">
+<div>
+
+![w:300px v-center](images/docker-logo.png)
+
+</div>
+<div data-marpit-fragment>
+
+![w:150px v-center](images/right-arrow.png)
+
+</div>
+<div data-marpit-fragment>
+
+![w:490px v-center](images/k8s-logo.png)
+
+</div>
+</div>
 
 ---
 
 ## 3. PRODUCTION TO SCALE 
 ## Kubernetes
-- ADD MORE
+- Complete control of ingress and egress
+- Automatic TLS certificates
+- Load balance workload
+- Automatic scaling based on cpu/memory consumption
+- High-availability across nodes (and regions)
+
+---
+
+# LIVE NOW
+
+<div class="columns-2">
+
+<div class="columns-2">
+<div>
+
+![w:200px](images/vault.png)
+![w:300px](images/fastapi.png)
+
+
+</div>
+<div>
+
+![w:240px](images/jenkins.png)
+![w:280px](images/gitlab.png)
+
+
+</div>
+</div>
+
+<div>
+
+#### **Projects**
+
+- Power Outage Monitor
+- SNOW to PRTG Automation
+- Email API
+
+![](images/grafana.png)
+
+</div>
+</div>
+
+<!--
+- self-deployed apps
+-->
 
 ---
 

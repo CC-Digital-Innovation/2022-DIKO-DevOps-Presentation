@@ -7,4 +7,6 @@ sequenceDiagram
     activate Kubernetes
     Kubernetes->>GitLab: Get image
     GitLab-->>Kubernetes: 
+    Kubernetes->>Vault: Decrypt config file
+    Vault-->>Kubernetes: 
     deactivate Kubernetes
